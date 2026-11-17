@@ -78,7 +78,7 @@ The item tower combines a book-ID embedding with a learned projection of book me
 First, categorical metadata is embedded and concatenated:
 
 $$
-\mathbf{m}_i = \operatorname{Concat}\left(E_L[l_i],\ E_Y[y_i],\ E_A[a_i]\right)
+\mathbf{m}_i = \operatorname{Concat}\left(E_L[l_i], E_Y[y_i], E_A[a_i]\right)
 $$
 
 The notebook uses the following embedding dimensions:
@@ -131,7 +131,7 @@ User Embedding     Item Embedding   Embedding(4)  Embedding(4)  Embedding(8)
 For user $u$ and item $i$, the model computes a scaled dot-product score with user and item bias terms:
 
 $$
-s(u, i) = \frac{\mathbf{u}_u^\top \mathbf{v}_i}{\sqrt{d}} + b_u + b_i
+s(u, i) = \frac{\mathbf{u}_u^{\top} \mathbf{v}_i}{\sqrt{d}} + b_u + b_i
 $$
 
 where:
@@ -167,13 +167,13 @@ The notebook's default training path uses cross-entropy over one positive candid
 For a batch example:
 
 $$
-\mathcal{L}_{u} = -\log \frac{\exp\left(s(u, i^+)/\tau\right)}{\exp\left(s(u, i^+)/\tau\right) + \sum_{j=1}^{10} \exp\left(s(u, i_j^-)/\tau\right)}
+\mathcal{L}_{u} = -\log \frac{\exp\left(s(u, i^{+})/\tau\right)}{\exp\left(s(u, i^{+})/\tau\right) + \sum_{j=1}^{10} \exp\left(s(u, i_j^{-})/\tau\right)}
 $$
 
 where:
 
-- $i^+$: positive book
-- $i_j^-$: sampled negative book
+- $i^{+}$: positive book
+- $i_j^{-}$: sampled negative book
 - $s(u, i)$: model compatibility score
 - $\tau$: temperature (the notebook defaults to 1)
 
@@ -204,7 +204,7 @@ The principal retrieval metric implemented is **Recall@20**, evaluated on held-o
 For user $u$:
 
 $$
-\operatorname{Recall}@K(u) = \frac{|R_K(u) \cap P_u|}{|P_u|}
+\operatorname{Recall}@K(u) = \frac{\lvert R_K(u) \cap P_u \rvert}{\lvert P_u \rvert}
 $$
 
 where:
@@ -215,7 +215,7 @@ where:
 The reported aggregate is the mean of per-user recall values over users with held-out positives:
 
 $$
-\operatorname{MeanRecall}@K = \frac{1}{|U_{\text{eval}}|} \sum_{u \in U_{\text{eval}}} \operatorname{Recall}@K(u)
+\operatorname{MeanRecall}@K = \frac{1}{\lvert U_{\text{eval}} \rvert} \sum_{u \in U_{\text{eval}}} \operatorname{Recall}@K(u)
 $$
 
 ### Why Recall@K?
