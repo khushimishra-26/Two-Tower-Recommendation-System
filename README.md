@@ -72,10 +72,10 @@ The item tower combines a book-ID embedding with a learned projection of book me
 
 First, categorical metadata is embedded:
 
-\[
+$$
 \mathbf{m}_i =
-[\ E_L[l_i]\ ;\ E_Y[y_i]\ ;\ E_A[a_i]\ ]
-\]
+$$ E_L[l_i]\ ;\ E_Y[y_i]\ ;\ E_A[a_i]$$
+$$
 
 The notebook uses embedding dimensions:
 - Language: 4
