@@ -11,13 +11,13 @@ A neural recommendation system built on the **Goodreads-10k** dataset. The proje
 
 Explicit ratings are transformed into an implicit preference signal:
 
-$$\[
+$$
 y_{ui} =
 \begin{cases}
 1 & \text{if } r_{ui} \geq 4\\
 0 & \text{otherwise}
 \end{cases}
-\]$$
+$$
 
 where \(r_{ui}\) is the rating user \(u\) gave book \(i\).
 
