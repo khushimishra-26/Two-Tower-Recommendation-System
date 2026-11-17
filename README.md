@@ -1,4 +1,4 @@
-# Goodreads Book Recommendation System
+# Book Recommendation System
 
 ### A Two-Tower Neural Retrieval Model with Metadata-Aware Item Representations
 
