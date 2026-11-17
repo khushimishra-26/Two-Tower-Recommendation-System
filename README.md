@@ -90,7 +90,7 @@ The notebook uses the following embedding dimensions:
 The concatenated metadata vector is passed through a feed-forward network:
 
 $$
-\mathbf{v}^{\text{meta}}_i = W_2 \operatorname{ReLU}\left(\operatorname{LayerNorm}(W_1 \mathbf{m}_i + b_1)\right) + b_2
+\mathbf{v}^{\text{meta}}_i = W_2 \{ReLU}\left(\{LayerNorm}(W_1 \mathbf{m}_i + b_1)\right) + b_2
 $$
 
 The metadata projection has a 64-dimensional hidden layer and produces a 64-dimensional output. It is added to the book-ID embedding:
@@ -204,7 +204,7 @@ The principal retrieval metric implemented is **Recall@20**, evaluated on held-o
 For user $u$:
 
 $$
-\operatorname{Recall}@K(u) = \frac{\lvert R_K(u) \cap P_u \rvert}{\lvert P_u \rvert}
+\{Recall}@K(u) = \frac{\lvert R_K(u) \cap P_u \rvert}{\lvert P_u \rvert}
 $$
 
 where:
