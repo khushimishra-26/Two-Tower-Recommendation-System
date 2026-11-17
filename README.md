@@ -215,7 +215,7 @@ where:
 The reported aggregate is the mean of per-user recall values over users with held-out positives:
 
 $$
-\operatorname{MeanRecall}@K = \frac{1}{\lvert U_{\text{eval}} \rvert} \sum_{u \in U_{\text{eval}}} \operatorname{Recall}@K(u)
+\{MeanRecall}@K = \frac{1}{\lvert U_{\text{eval}} \rvert} \sum_{u \in U_{\text{eval}}} \{Recall}@K(u)
 $$
 
 ### Why Recall@K?
