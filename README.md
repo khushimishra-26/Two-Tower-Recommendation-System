@@ -60,9 +60,9 @@ The model consists of two independently parameterized encoders that map users an
 
 The user tower uses a trainable embedding lookup:
 
-\[
+$$
 \mathbf{u}_u = E_U[u]
-\]
+$$
 
 where \(E_U \in \mathbb{R}^{N_U \times d}\) is the user embedding matrix and \(d=64\).
 
